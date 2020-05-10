@@ -10,6 +10,6 @@ namespace B2CUserManagement.Interfaces
 
         Task<IGraphServiceUsersCollectionPage> GetUserByEmail(string email);
 
-        void DeleteUser(string email);
+        Task<bool> DeleteUser(string email);
     }
 }

@@ -105,7 +105,7 @@ namespace B2CUserManagement
             }
         }
 
-        public async void DeleteUser(string email)
+        public async Task<bool> DeleteUser(string email)
         {
             var user = await this.GetUserByEmail(email);
             var userId = user.CurrentPage[0].Id;
@@ -116,10 +116,12 @@ namespace B2CUserManagement
                 await this.graphClient.Users[userId]
                    .Request()
                    .DeleteAsync();
+
+                return true;
             }
             catch (Exception ex)
             {
-
+                return false;
             }
         }
     }
