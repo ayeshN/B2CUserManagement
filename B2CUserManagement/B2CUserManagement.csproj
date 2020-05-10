@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.Graph.Auth" Version="1.0.0-preview.4" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.13.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 
 
